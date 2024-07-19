@@ -13,8 +13,8 @@ const Header = () => {
             <Link className="px-3 cursor-pointer myNav" to="foodbot" smooth={true} duration={500}>
               Бот для еды
             </Link>
-            <Link className="px-3 cursor-pointer myNav" to="servicebot" smooth={true} duration={500}>
-              Бот для услуги
+            <Link className="px-3 cursor-pointer myNav" to="botcases" smooth={true} duration={500}>
+              КЕЙСЫ
             </Link>
             <Link className="px-3 cursor-pointer myNav" to="cta" smooth={true} duration={500}>
               Контакты

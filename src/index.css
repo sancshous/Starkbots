@@ -16,3 +16,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.text-4xl {
+  font-size: 3rem;
+  line-height: normal;
+}

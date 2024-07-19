@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import Header from './components/Header';
-import FoodBotSection from './components/FoodBotSection';
-import ServiceBotSection from './components/ServiceBotSection';
+import BotCases from './components/BotCases';
 import CTA from './components/CTA';
 import Footer from './components/Footer';
 import FirstSection from './components/FirstSection';
@@ -22,11 +21,8 @@ function App() {
     <div className="App">
       <Header />
       <FirstSection />
-      <Element name="foodbot">
-        <FoodBotSection />
-      </Element>
-      <Element name="servicebot">
-        <ServiceBotSection />
+      <Element name="botcases">
+        <BotCases />
       </Element>
       <Element name="cta">
         <CTA />

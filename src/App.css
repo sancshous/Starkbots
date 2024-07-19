@@ -113,7 +113,7 @@ button:hover {
 }
 
 .myheader {
-  background-color: #404040;
+  background-color: #3D3D3D;
   font-size: 20px;
 }
 
@@ -124,4 +124,50 @@ button:hover {
 .myNav {
   color: white;
   font-weight: bold;
+}
+
+.mockup {
+  margin: 0;
+  height: 700px;
+  width: 350px;
+}
+
+.case-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
+  justify-content: flex-start;
+}
+
+.case-container h3 {
+  font-size: 24px;
+  color: black;
+}
+
+.case-section {
+  align-items: flex-start;
+}
+
+.myH {
+  font-weight: 500;
+}
+
+.myh1 {
+  font-weight: 500;
+}
+
+.myP {
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.myExample {
+  margin-bottom: 20px;
+  background-color: #3D3D3D;
+  color: white;
+  transition: transform 0.3s;
+}
+
+.myExample:hover {
+  transform: scale(1.1);
 }
