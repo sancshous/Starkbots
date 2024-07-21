@@ -1,55 +1,42 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-scroll';
+import Modal from 'react-modal';
 
-const Header = () => {
-  const [showModal, setShowModal] = useState(false);
+Modal.setAppElement('#root');
 
+const Header = ({ openModal }) => {
   return (
-    <header className="bg-gray-800 text-white py-6 mb-10 shadow-lg myheader">
-      <div className="container mx-auto flex justify-between items-center">
+    <header className="bg-gray-800 text-white py-6 mb-10 shadow-lg fixed w-full top-0 z-50 myheader">
+      <div className="container mx-auto flex justify-between items-center myHeaderContainer">
         <div className="flex items-center">
           <img src="/../images/logo.jpeg" alt="Logo" className="h-12 mr-6" />
-          <div>
-            <Link className="px-3 cursor-pointer myNav" to="foodbot" smooth={true} duration={500}>
-              Бот для еды
+          <div className='header-column'>
+            <div className='header-row'>
+            <Link className="px-3 cursor-pointer myNav" to="main" smooth={true} duration={500}>
+              Главная
             </Link>
+            <Link className="px-3 cursor-pointer myNav" to="about" smooth={true} duration={500}>
+              О проекте
+            </Link>
+            </div>
+            <div className='header-row'>
             <Link className="px-3 cursor-pointer myNav" to="botcases" smooth={true} duration={500}>
-              КЕЙСЫ
+              Кейсы
             </Link>
             <Link className="px-3 cursor-pointer myNav" to="cta" smooth={true} duration={500}>
               Контакты
             </Link>
+            </div>
           </div>
         </div>
-        <div className="flex items-center">
-          <p className="mr-6">Тел: +7(922) 683-88-83</p>
-          <button className="bg-blue-500 text-white py-2 px-4 rounded-full hover:bg-blue-600 transition myBtn" onClick={() => setShowModal(true)}>Оставить заявку</button>
+        <div className="flex items-center secondrowHeader">
+        <a href="tel:+79226838883" className="mr-6 phone">Тел: +7(922) 683-88-83</a>
+          <button className="bg-blue-500 text-white py-2 px-4 rounded-full hover:bg-blue-600 transition myBtn" onClick={openModal}>
+            Оставить заявку
+          </button>
         </div>
       </div>
-      {showModal && <Modal setShowModal={setShowModal} />}
     </header>
-  );
-}
-
-const Modal = ({ setShowModal }) => {
-  return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-      <div className="bg-white p-6 rounded-lg shadow-lg w-96 relative">
-        <h2 className="text-2xl mb-4">Оставить заявку</h2>
-        <form>
-          <label className="block mb-2">
-            Имя:
-            <input type="text" className="w-full p-2 border border-gray-300 rounded" />
-          </label>
-          <label className="block mb-2">
-            Номер телефона:
-            <input type="text" className="w-full p-2 border border-gray-300 rounded" />
-          </label>
-          <button type="submit" className="bg-blue-500 text-white py-2 px-4 rounded-full hover:bg-blue-600 transition mt-4">Отправить</button>
-        </form>
-        <button className="absolute top-4 right-4 text-gray-600 hover:text-gray-900" onClick={() => setShowModal(false)}>✖</button>
-      </div>
-    </div>
   );
 }
 

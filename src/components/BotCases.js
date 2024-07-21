@@ -8,14 +8,36 @@ import { motion } from 'framer-motion';
 
 const mockups = [
   {
+    name: 'WEBAPP ДЛЯ ЗАКАЗА ЕДЫ',
+    description: 'Данный бот позволит в считанные секунды оформить заказ и оплатить прямо внутри Telegram',
+    url: 'https://t.me/ShaurmaStarkTest_bot',
+    photos: [
+      '/../images/shaurma/Group1.png',
+      '/../images/shaurma/Group2.png',
+      '/../images/shaurma/Group3.png',
+      '/../images/shaurma/Group4.png',
+      '/../images/shaurma/Group5.png',
+    ],
+    advantages: [
+      { icon: '🍔', text: 'Быстрое оформление заказа' },
+      { icon: '💵', text: 'Интеграция с платежной системой' },
+      { icon: '📊', text: 'Архивация заказов в Google Tables' },
+      { icon: '😎', text: 'Автоматизация будущих заказов' },
+    ],
+  },
+  {
     name: 'WEBAPP ДЛЯ ЗАПИСИ НА УСЛУГУ',
     description: 'Этот кейс представялет шаблон для записи на услуги вашего бизнеса',
     url: 'https://t.me/Stark_Booking_bot',
     photos: [
-      '/../images/service/Group7.png',
       '/../images/service/Group1.png',
+      '/../images/service/Group2.png',
       '/../images/service/Group3.png',
       '/../images/service/Group4.png',
+      '/../images/service/Group5.png',
+      '/../images/service/Group6.png',
+      '/../images/service/Group7.png',
+      '/../images/service/Group8.png',
     ],
     advantages: [
       { icon: '📅', text: 'Легкость бронирования времени' },
@@ -25,29 +47,28 @@ const mockups = [
     ],
   },
   {
-    name: 'WEBAPP ДЛЯ ЗАКАЗА ЕДЫ',
-    description: 'Данный бот позволит в считанные секунды оформить заказ и оплатить прямо внутри Telegram',
-    url: 'https://t.me/ShaurmaStarkTest_bot',
+    name: 'БОТ ДЛЯ ЧАСТНОЙ ШКОЛЫ',
+    description: 'Данный бот отправит заявку менеджеру школы',
+    url: 'https://t.me/StarkSchoolTest_bot',
     photos: [
-      '/../images/service/Group2.png',
-      '/../images/service/Group5.png',
-      '/../images/service/Group6.png',
-      '/../images/service/Group8.png',
+      '/../images/school/Group1.png',
+      '/../images/school/Group2.png'
     ],
     advantages: [
-      { icon: '🍔', text: 'Быстрое оформление заказа' },
-      { icon: '💵', text: 'Интеграция с платежной системой' },
       { icon: '📊', text: 'Архивация заказов в Google Tables' },
-      { icon: '😎', text: 'Автоматизация будущих заказов' },
     ],
   },
 ];
 
 const BotCases = () => {
   return (
-    <section className="py-10 bg-gray-100" data-aos="fade-up">
+    <section className="py-10 bg-lightblue-50" data-aos="fade-up">
       <div className="container mx-auto text-center">
         <h2 className="text-4xl font-bold mb-8 myH">КЕЙСЫ</h2>
+        <div className="bg-white p-4 mb-4 shadow-lg rounded-lg">
+        Представленные ниже кейсы являются шаблонами и демонстрируют общий подход к разработке ботов. Я адаптирую решение под ваши уникальные 
+        требования и особенности, чтобы обеспечить максимальное соответствие вашим целям и ожиданиям.
+        </div>
         <Swiper
           modules={[Navigation, Pagination]}
           spaceBetween={50}
