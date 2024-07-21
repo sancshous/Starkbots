@@ -195,7 +195,7 @@ button:hover {
 
   .fisrtsection {
     padding: 40px 0;
-    margin-top: 120px;
+    margin-top: 140px;
   }
 
   .mockup {
@@ -218,6 +218,10 @@ button:hover {
 
   .myHeaderContainer {
     width: 100%;
+  }
+
+  .myheader {
+    font-size: 1rem;
   }
 }
 
